@@ -1,0 +1,42 @@
+<body>
+    <div class="calculate">
+        <h1>Calculate Average Marks</h1>
+
+        <!-- Main Input Form -->
+        <form action="{{ url_for('form') }}" method="POST"> <!-- "{{ url_for('form') }}" hit the /form url-->
+            <input 
+                type="text" 
+                name="maths" 
+                placeholder="Maths" 
+                required
+            >
+
+            <input 
+                type="text" 
+                name="science" 
+                placeholder="Science" 
+                required
+            >
+
+            <input 
+                type="text" 
+                name="history" 
+                placeholder="History" 
+                required
+            >
+
+            <button 
+                type="submit" 
+                class="btn btn-primary btn-block btn-large"
+            >
+                Calculate
+            </button>
+
+        </form>
+
+        <br><br>
+
+        The Average Score is {{score}}
+
+    </div>
+</body>
